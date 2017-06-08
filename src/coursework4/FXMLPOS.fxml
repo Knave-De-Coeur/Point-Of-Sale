@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.cell.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coursework4.POScontroller">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" >
+         <children>
+            <Label fx:id="title" text="POS">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <TableView fx:id="pos" editable="true" prefHeight="233.0" prefWidth="600.0">
+              <columns>
+                <TableColumn prefWidth="165.0" text="Transaction Header ID" >
+                    <cellValueFactory><PropertyValueFactory property="trnsheaderId" /></cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="138.0" text="ProductPrice ID" >
+                    <cellValueFactory><PropertyValueFactory property="prdpriceId" /></cellValueFactory>
+                </TableColumn>
+                  <TableColumn prefWidth="146.0" text="Quantity" >
+                    <cellValueFactory><PropertyValueFactory property="quantity" /></cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="150.0" text="SubTotal" >
+                    <cellValueFactory><PropertyValueFactory property="subTotal" /></cellValueFactory>
+                  </TableColumn>
+              </columns>
+              <items>
+                  <FXCollections fx:factory="observableArrayList">
+                  </FXCollections>
+              </items>
+            </TableView>
+            <HBox alignment="CENTER" prefHeight="61.0" prefWidth="600.0">
+               <children>
+                  <Label text="Product ID: " />
+                  <TextField fx:id="prdIDField" prefHeight="27.0" prefWidth="82.0" promptText="ProductID">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="Quantity:">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="qtyField" promptText="Quantity">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="addItem" mnemonicParsing="false" onAction="#enterItem" text="Add Item">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="rmvItem" mnemonicParsing="false" onAction="#removeItems" text="Remove Item" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="endTransac" mnemonicParsing="false" onAction="#endTransaction" text="End Transaction" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

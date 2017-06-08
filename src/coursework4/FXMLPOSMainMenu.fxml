@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="183.0" prefWidth="455.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coursework4.LoginController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="455.0">
+         <children>
+            <Label fx:id="userName" text="Logged in!" />
+            <HBox alignment="CENTER" prefHeight="87.0" prefWidth="455.0">
+               <children>
+                  <Button fx:id="signout" mnemonicParsing="false" onAction="#switchStage" text="Sign Out" />
+                  <Button fx:id="newTransac" mnemonicParsing="false" onAction="#openPOS" text="Start New Transaction">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="exit" mnemonicParsing="false" onAction="#exitSystem" text="Exit System">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

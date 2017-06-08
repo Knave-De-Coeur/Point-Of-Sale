@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="101.0" prefWidth="272.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coursework4.DisplayMsgController">
+   <children>
+      <Label fx:id="prompt" layoutX="6.0" layoutY="26.0" prefHeight="17.0" prefWidth="262.0" />
+      <Button fx:id="OK" layoutX="118.0" layoutY="51.0" mnemonicParsing="false" onAction="#closeWindow" text="OK" />
+   </children>
+</AnchorPane>
